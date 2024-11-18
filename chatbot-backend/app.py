@@ -292,7 +292,7 @@ from nltk.tokenize import RegexpTokenizer
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app, origins = ["https://anti-ai-anti-ai.vercel.app"])
+CORS(app, origins = ["https://www.antiai.ltd"])
 
 # # Ensure necessary environment variables are set
 # antiai_api_key = os.getenv("ANTIAI_API_KEY")
