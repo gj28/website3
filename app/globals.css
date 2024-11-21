@@ -448,6 +448,25 @@ column-gap: 45px;
   .mlogo{
     size: 69;
   }
+  .carerp{
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+  }
+  .cont{
+margin-bottom: 10px;
+    width: 100%;
+  }
+  .formcar{
+    width: 100%;
+    text-align: center;
+  }
+  .review{
+    width: 90vw;
+  }
+  .cardsin{
+    width: 65vw;
+  }
 }
 
 .antiname{
@@ -456,3 +475,14 @@ column-gap: 45px;
 .mlink{
   margin-left: 45px;
 }
+/* Add this to hide the scrollbar for horizontal scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+

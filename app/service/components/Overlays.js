@@ -5,6 +5,7 @@ import AiDialog from "./AiDialog"
 import AppDialog from "./AppDialog"
 import CloudDialog from "./CloudDialog"
 import WebDialog from "./WebDialog"
+import ReviewSection from './ReviewSection'
 
 
 const Overlay = forwardRef(({ caption, scroll }, ref) => {
@@ -49,6 +50,13 @@ const Overlay = forwardRef(({ caption, scroll }, ref) => {
           <h1>Web Services</h1>
           <p className="text-white"> Our Web Development services provide end-to-end solutions for building robust, scalable,and user-friendly websites and applications, customized to your business needs.</p>
           <WebDialog/>
+        </div>
+      </div>
+      <div id="review" className="mt-[20vh]">
+        <div className="text-white dot">
+          <h1>Reviews</h1>
+          <p className="text-white mb-[50px]">   We value feedback from our clients and are constantly striving to improve. Here's what some of them have to say:</p>
+         <ReviewSection/>
         </div>
       </div>
       <span className="caption" ref={caption}>
