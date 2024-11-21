@@ -84,7 +84,7 @@ export default function CareerPosition() {
           </ul>
         </div>
 
-        <form onSubmit={handleSubmit} className="formcar space-y-4 max-w-xl w-1/2 bg-gray-900 p-8 rounded-lg">
+      
         <form onSubmit={handleSubmit} className="formcar space-y-4 max-w-xl w-1/2 bg-gray-900 p-8 rounded-lg">
           <div>
             <label htmlFor="name" className="text-white block mb-2">Full name</label>
