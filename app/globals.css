@@ -448,6 +448,14 @@ column-gap: 45px;
   .mlogo{
     size: 69;
   }
+   .cont{
+margin-bottom: 10px;
+    width: 100%;
+  }
+  .formcar{
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .antiname{
