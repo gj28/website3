@@ -190,7 +190,7 @@ function Content() {
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 1 }}
-        className="ociw w-[30vw] h-[100vh] left-[55vw] flex flex-col items-start justify-center absolute top-[610vh] "
+        className="ociw w-[30vw] h-[100vh] left-[55vw] flex flex-col items-start justify-center absolute top-[600vh] "
       >
         <h1 className=" text-white text-5xl mb-6">
           Location
@@ -214,6 +214,17 @@ function Content() {
           border-radius="5px"
           loading="lazy"
         ></iframe> */}
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, delay: 1 }}
+        className=" ociw  p-2 left-[37vw] bg-black rounded-md shadow-md shadow-red-500  w-[25vw] flex flex-col items-center justify-center absolute top-[690vh] right-0"
+      >
+        <h1 className="abt text-white text-2xl">
+      || अन्ते सत्यं विजयते || 
+        </h1>
+       
       </motion.div>
     </Scroll>
   );
