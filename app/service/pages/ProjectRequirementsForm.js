@@ -58,7 +58,12 @@ const ProjectRequirementsForm = ({ setShowForm }) => {
     try {
       // Send data to the API
       const response = await axios.post(
-        "/api/submit-form.js",
+        "http://localhost:5000/api/submit-form",
+
+        // "https://aws.antiai.ltd/api/fetchservices ", 
+
+        // "https://aws.antiai.ltd/api/submitservice",
+        
         submitData, 
         {
           headers: {

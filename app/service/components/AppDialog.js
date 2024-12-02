@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/dialog"
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-// import ProjectRequirementsForm from '../pages/ProjectRequirementsForm'
+import ProjectRequirementsForm from '../pages/ProjectRequirementsForm'
 
 
 function AppDialog() {
@@ -87,8 +87,8 @@ function AppDialog() {
     </Dialog>
 
 
-    <Link href="https://docs.google.com/forms/d/e/1FAIpQLSe5IjPB3xM5RSaqrEw5gxC4FBaVM4xz5BISJ0cZxX-UP8fO0w/viewform"> <Button className="mt-4 bg-tranparant" >BUY NOW </Button></Link>
-    {/* <Dialog open={isFormModalOpen} onOpenChange={setIsFormModalOpen}>
+    {/* <Link href="https://docs.google.com/forms/d/e/1FAIpQLSe5IjPB3xM5RSaqrEw5gxC4FBaVM4xz5BISJ0cZxX-UP8fO0w/viewform"> <Button className="mt-4 bg-tranparant" >BUY NOW </Button></Link> */}
+    <Dialog open={isFormModalOpen} onOpenChange={setIsFormModalOpen}>
         <DialogTrigger asChild>
           <Button
             onClick={() => setIsFormModalOpen(true)}
@@ -103,7 +103,7 @@ function AppDialog() {
         
           <ProjectRequirementsForm />
         </DialogContent>
-      </Dialog>  */}
+      </Dialog> 
       </>
   )
 }

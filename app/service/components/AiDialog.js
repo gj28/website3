@@ -9,8 +9,8 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-// import ProjectRequirementsForm from "../pages/ProjectRequirementsForm"; 
-import Link from "next/link";
+import ProjectRequirementsForm from "../pages/ProjectRequirementsForm"; 
+// import Link from "next/link";
 
 function AiDialog() {
   const [isAIModalOpen, setIsAIModalOpen] = useState(false);
@@ -101,7 +101,7 @@ function AiDialog() {
         </DialogContent>
       </Dialog>
 
-      <Link href="https://docs.google.com/forms/d/e/1FAIpQLSe5IjPB3xM5RSaqrEw5gxC4FBaVM4xz5BISJ0cZxX-UP8fO0w/viewform"> <Button className="mt-4 bg-tranparant" >BUY NOW </Button></Link>
+      {/* <Link href="https://docs.google.com/forms/d/e/1FAIpQLSe5IjPB3xM5RSaqrEw5gxC4FBaVM4xz5BISJ0cZxX-UP8fO0w/viewform"> <Button className="mt-4 bg-tranparant" >BUY NOW </Button></Link>
       {/* "BUY NOW" Button to open the form modal */}
       {/* <Dialog open={isFormModalOpen} onOpenChange={setIsFormModalOpen}>
         <DialogTrigger asChild>
@@ -118,8 +118,94 @@ function AiDialog() {
           <ProjectRequirementsForm />
         </DialogContent>
       </Dialog>  */}
-    </div>
-  );
+
+
+
+
+<Dialog open={isFormModalOpen} onOpenChange={setIsFormModalOpen}>
+<Button
+  onClick={() => setIsFormModalOpen(true)}
+  className="text-white mt-4 bg-transparent"
+>
+  BUY NOW
+</Button>
+
+<DialogContent className="max-w-3xl p-6">
+  <DialogHeader>
+    <DialogTitle className="text-xl font-bold">
+      Project Requirements Form
+    </DialogTitle>
+  </DialogHeader>
+  {/* Form Component */}
+  <ProjectRequirementsForm />
+</DialogContent>
+</Dialog>
+</div>
+);
 }
 
+
 export default AiDialog;
+
+
+// import React, { useState } from "react";
+// import {
+//   Dialog,
+//   DialogContent,
+//   DialogHeader,
+//   DialogTitle,
+// } from "@/components/ui/dialog";
+// import { Button } from "@/components/ui/button";
+// import ProjectRequirementsForm from "../pages/ProjectRequirementsForm.js"; // Ensure the path is correct
+
+// function AiDialog() {
+//   const [isAIModalOpen, setIsAIModalOpen] = useState(false);
+//   const [isFormModalOpen, setIsFormModalOpen] = useState(false);
+
+//   return (
+//     <div>
+//       {/* AI Information Dialog */}
+//       <Dialog open={isAIModalOpen} onOpenChange={setIsAIModalOpen}>
+//         <Button onClick={() => setIsAIModalOpen(true)} className="text-white mt-4 bg-transparent">
+//           READ MORE
+//         </Button>
+
+//         <DialogContent className="bg-tranparant/50 backdrop-blur-sm max-w-3xl max-h-[80vh] overflow-y-auto p-6">
+//           <DialogHeader>
+//             <DialogTitle className="text-white text-2xl font-bold mb-4">
+//               Transform Your Business with ANTI.Ai's Cutting-Edge AI Solutions
+//             </DialogTitle>
+//           </DialogHeader>
+//           {/* Your AI Information Content */}
+//           <p className="text-white">
+//             Welcome to ANTI.Ai, where we leverage the power of AI to automate
+//             your business and boost efficiency...
+//           </p>
+//           {/* Additional Content Here */}
+//         </DialogContent>
+//       </Dialog>
+
+//       {/* Buy Now Dialog */}
+//       <Dialog open={isFormModalOpen} onOpenChange={setIsFormModalOpen}>
+//         <Button
+//           onClick={() => setIsFormModalOpen(true)}
+//           className="text-white mt-4 bg-transparent"
+//         >
+//           BUY NOW
+//         </Button>
+
+//         <DialogContent className="max-w-3xl p-6">
+//           <DialogHeader>
+//             <DialogTitle className="text-xl font-bold">
+//               Project Requirements Form
+//             </DialogTitle>
+//           </DialogHeader>
+//           {/* Form Component */}
+//           <ProjectRequirementsForm />
+//         </DialogContent>
+//       </Dialog>
+//     </div>
+//   );
+// }
+
+// export default AiDialog;
