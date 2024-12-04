@@ -38,7 +38,7 @@ const ProjectRequirementsForm = ({ setShowForm }) => {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     const submitData = new FormData();
     submitData.append("email", formData.email);
     submitData.append("companyName", formData.companyName);
@@ -46,7 +46,7 @@ const ProjectRequirementsForm = ({ setShowForm }) => {
     submitData.append("contactMethod", formData.contactMethod);
     submitData.append("description", formData.description);
     submitData.append("services", formData.services.join(", ")); // Combine services into a single string
-
+  
     // Ensure PDF file is selected and append it directly
     if (formData.pdfFile) {
       submitData.append("pdfFile", formData.pdfFile); // Directly append the file (no base64 conversion)
@@ -54,25 +54,21 @@ const ProjectRequirementsForm = ({ setShowForm }) => {
       alert("Please upload a PDF file.");
       return;
     }
-
+  
     try {
       // Send data to the API
       const response = await axios.post(
-        "http://localhost:5000/api/submit-form",
-
-        // "https://aws.antiai.ltd/api/fetchservices ", 
-
-        // "https://aws.antiai.ltd/api/submitservice",
-        
-        submitData, 
+        "https://aws.antiai.ltd/api/submitservice",
+        submitData,
         {
           headers: {
             "Content-Type": "multipart/form-data", // Set the correct content type for file uploads
           },
         }
       );
-
-      if (response.data.result === 'success') {
+  
+      // Check the API response
+      if (response.data.message === "Service request submitted successfully") {
         alert("Form submitted successfully!");
         setFormData({
           email: "",
@@ -83,6 +79,7 @@ const ProjectRequirementsForm = ({ setShowForm }) => {
           services: [],
           pdfFile: null,
         });
+        window.location.reload();
       } else {
         alert("Error submitting form");
       }
@@ -100,7 +97,7 @@ const ProjectRequirementsForm = ({ setShowForm }) => {
       }
     }
   };
-
+  
   return (
     <div className="bg-transparent backdrop-blur-sm p-6 rounded-lg shadow-lg w-full max-w-2xl mx-auto text-white overflow-y-auto max-h-[70vh]">
       <h2 className="text-center text-2xl font-semibold mb-4">Project Requirements Form</h2>
